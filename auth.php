@@ -161,7 +161,7 @@ class auth_plugin_authmantis extends DokuWiki_Auth_Plugin {
 		$t_access_level_string = strtoupper(
 			MantisEnum::getLabel(
 				config_get( 'access_levels_enum_string' ),
-				access_get_project_level( $t_project_id )
+				access_get_project_level( $t_project_id, $p_user_id )
 			)
 		);
 		$t_access_levels = array( $t_access_level_string );
